@@ -23,7 +23,7 @@
          "<DATABRICKS INSTANCE NAME>.cloud.databricks.com", 
          ".pypi.org",
          ".pythonhosted.org",
-         ".cran.r-project.org",
+         ".cran.r-project.org"
          ]
       }
    }
