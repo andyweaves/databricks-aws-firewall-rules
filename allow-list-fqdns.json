@@ -1,0 +1,30 @@
+{
+"RuleVariables": {
+                "IPSets": {
+                        "HOME_NET": {
+                                "Definition": [
+                                  "<SPOKE VPC CIDR RANGE>",
+							                    "<HUB VPC CIDR RANGE>"
+                                ]
+                        }
+                }
+        },
+        "RulesSource": {
+                "RulesSourceList": {
+                        "TargetTypes": [
+                           "TLS_SNI",
+                           "HTTP_HOST"
+                        ],
+                        "GeneratedRulesType": "ALLOWLIST",
+                        "Targets": [
+         "<WEBAPP>.cloud.databricks.com",
+         "<SCC RELAY>.cloud.databricks.com",
+         "<RDS (IF USING BUILT-IN METASTORE)>.rds.amazonaws.com",
+         "<DATABRICKS INSTANCE NAME>.cloud.databricks.com", 
+         ".pypi.org",
+         ".pythonhosted.org",
+         ".cran.r-project.org",
+         ]
+      }
+   }
+}
