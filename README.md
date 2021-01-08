@@ -8,8 +8,8 @@ To use these rules:
 2) Test that it's working by running the ```aws network-firewall list-firewalls``` command
 3) Replace the capitalised ```<"PLACEHOLDERS">``` in the 3 JSON files with relevant URLs and CIDR ranges for your Databricks environment:
   
-  * ```<SPOKE VPC CIDR RANGE>``` - The CIDR range for your [Databricks](https://databricks.com/) [Customer Managed VPC](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html)
-  * ```<<HUB VPC CIDR RANGE>``` - The CIDR range for the VPC in which your [AWS Network Firewall](https://aws.amazon.com/network-firewall/) sits
+  * ```"<SPOKE VPC CIDR RANGE>"``` - The CIDR range for your [Databricks](https://databricks.com/) [Customer Managed VPC](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html)
+  * ```"<HUB VPC CIDR RANGE>"``` - The CIDR range for the VPC in which your [AWS Network Firewall](https://aws.amazon.com/network-firewall/) sits
   * ```"<WEBAPP>.cloud.databricks.com"``` - The [Databricks](https://databricks.com/) Webapp URL for your region as per [Firewall appliance infrastructure
 ](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html#firewall-appliance-infrastructure)
   * ```"<SCC RELAY>.cloud.databricks.com"``` - The [Databricks](https://databricks.com/) [Secure Cluster Relay](https://docs.databricks.com/security/secure-cluster-connectivity.html) URL for your region as per [Firewall appliance infrastructure
