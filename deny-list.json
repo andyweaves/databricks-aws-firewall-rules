@@ -3,62 +3,62 @@
                 "IPSets": {
                         "HOME_NET": {
                                 "Definition": [
-                                        "<SPOKE VPC CIDR RANGE>",
-							  "<HUB VPC CIDR RANGE>"
+                                    	"<SPOKE VPC CIDR RANGE>",
+			 		"<HUB VPC CIDR RANGE>"
                                 ]
                         }
                 }
         },
         "RulesSource": {
             "StatefulRules": [
-                {
-                    "Action": "DROP",
-                    "Header": {
-                        "Protocol": "FTP",
-                        "Source": "Any",
-                        "SourcePort": "Any",
-                        "Direction": "ANY",
-                        "Destination": "Any",
-                        "DestinationPort": "Any"
-                    },
-                    "RuleOptions": [
-                        {
-                            "Keyword": "sid:1"
-                        }
-                    ]
+            {
+                "Action": "DROP",
+                "Header": {
+                    "Protocol": "FTP",
+                    "Source": "Any",
+                    "SourcePort": "Any",
+                    "Direction": "ANY",
+                    "Destination": "Any",
+                    "DestinationPort": "Any"
                 },
-                {
-                    "Action": "DROP",
-                    "Header": {
-                        "Protocol": "SSH",
-                        "Source": "Any",
-                        "SourcePort": "Any",
-                        "Direction": "ANY",
-                        "Destination": "Any",
-                        "DestinationPort": "Any"
-                    },
-                    "RuleOptions": [
-                        {
-                            "Keyword": "sid:2"
-                        }
-                    ]
+                "RuleOptions": [
+                    {
+                        "Keyword": "sid:1"
+                    }
+                ]
+            },
+            {
+                "Action": "DROP",
+                "Header": {
+                    "Protocol": "SSH",
+                    "Source": "Any",
+                    "SourcePort": "Any",
+                    "Direction": "ANY",
+                    "Destination": "Any",
+                    "DestinationPort": "Any"
                 },
-                {
-                    "Action": "DROP",
-                    "Header": {
-                        "Protocol": "ICMP",
-                        "Source": "Any",
-                        "SourcePort": "Any",
-                        "Direction": "ANY",
-                        "Destination": "Any",
-                        "DestinationPort": "Any"
-                    },
-                    "RuleOptions": [
-                        {
-                            "Keyword": "sid:3"
-                        }
-                    ]
-                }
-            ]
-        }
+                "RuleOptions": [
+                    {
+                        "Keyword": "sid:2"
+                    }
+                ]
+            },
+            {
+                "Action": "DROP",
+                "Header": {
+                    "Protocol": "ICMP",
+                    "Source": "Any",
+                    "SourcePort": "Any",
+                    "Direction": "ANY",
+                    "Destination": "Any",
+                    "DestinationPort": "Any"
+                },
+                "RuleOptions": [
+                    {
+                        "Keyword": "sid:3"
+                    }
+                ]
+            }
+        ]
     }
+}
