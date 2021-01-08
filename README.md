@@ -1,5 +1,8 @@
 # databricks-aws-firewall-rules
-Firewall rules for AWS Network Firewall, to be used in conjunction with your Databricks environment for the purposes of Data Exfiltration Protection
+
+This repo contains some example firewall rules for [AWS Network Firewall](https://aws.amazon.com/network-firewall/), specifically designed to help organisations further secure their [Databricks](https://databricks.com/) environments against the threat of data exfiltration. 
+
+To use these rules. 
 
 ```aws network-firewall create-rule-group --rule-group-name Databricks-FQDNs --rule-group file://allow-list-fqdns.json --type STATEFUL --capacity 100```
 
