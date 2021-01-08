@@ -1,10 +1,10 @@
 {
-"RuleVariables": {
+    "RuleVariables": {
                 "IPSets": {
                         "HOME_NET": {
                                 "Definition": [
                                   "<SPOKE VPC CIDR RANGE>",
-							                    "<HUB VPC CIDR RANGE>"
+				  "<HUB VPC CIDR RANGE>"
                                 ]
                         }
                 }
