@@ -6,7 +6,7 @@ To use these rules:
 
 1) Set up the [AWS CLI](https://docs.aws.amazon.com/cli/)
 2) Test that it's working by running the ```aws network-firewall list-firewalls``` command
-3) Replace the capitalised ```<"PLACEHOLDERS">``` in the 3 JSON files with relevant URLs and CIDR ranges for your Databricks environment:
+3) Replace the capitalised ```"<PLACEHOLDERS>"``` in the 3 JSON files with relevant URLs and CIDR ranges for your Databricks environment:
   
     * ```"<SPOKE VPC CIDR RANGE>"``` - The CIDR range for your [Databricks](https://databricks.com/) [Customer Managed VPC](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html)
     * ```"<HUB VPC CIDR RANGE>"``` - The CIDR range for the VPC in which your [AWS Network Firewall](https://aws.amazon.com/network-firewall/) sits
