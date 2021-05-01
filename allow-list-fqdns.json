@@ -17,8 +17,6 @@
                         ],
                         "GeneratedRulesType": "ALLOWLIST",
                         "Targets": [
-         "<WEBAPP>.cloud.databricks.com",
-         "<SCC RELAY>.cloud.databricks.com",
          "<RDS (IF USING BUILT-IN METASTORE)>.rds.amazonaws.com",
          "<DATABRICKS INSTANCE NAME>.cloud.databricks.com", 
          ".pypi.org",
