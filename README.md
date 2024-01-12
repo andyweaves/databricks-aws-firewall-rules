@@ -16,7 +16,10 @@ To use these rules:
     * ```"<DATABRICKS MANAGED HIVE METASTORE IP ADDRESS>"``` - (Optional) The **current IP address** of the [Databricks](https://databricks.com/) Managed Hive Metastore for your region as per [RDS addresses for legacy Hive metastore](https://docs.databricks.com/en/resources/supported-regions.html#rds-addresses-for-legacy-hive-metastore). Alternatively customers can use [their own Hive Metastore (legacy)](https://docs.databricks.com/data/metastores/external-hive-metastore.html) or [AWS Glue (legacy)](https://docs.databricks.com/data/metastores/aws-glue-metastore.html).
   
 > [!CAUTION]
-> The IP Address for the legacy Hive Metastore is not static and is therefore subject to change. Databricks recommends the use of [Unity Catalog](https://docs.databricks.com/en/data-governance/unity-catalog/index.html), the traffic for which can be routed over [AWS PrivateLink](https://docs.databricks.com/en/security/network/classic/privatelink.html). If the Databricks Managed Hive Metastore must be used, you will need to 
+> The IP Address for the legacy Hive Metastore is not static and is therefore subject to change. Databricks recommends the use of [Unity Catalog](https://docs.databricks.com/en/data-governance/unity-catalog/index.html), the traffic for which can be routed over [AWS PrivateLink](https://docs.databricks.com/en/security/network/classic/privatelink.html). If the Databricks Managed Hive Metastore must be used, you will need to
+> ```spark.hadoop.javax.jdo.option.ConnectionUserName admin
+> spark.hadoop.javax.jdo.option.ConnectionURL jdbc:derby:memory:myInMemDB;create=true
+> spark.hadoop.javax.jdo.option.ConnectionDriverName org.apache.derby.jdbc.EmbeddedDriver```
 
 4) Use the [create-rule-group](https://docs.aws.amazon.com/cli/latest/reference/network-firewall/create-rule-group.html) command to create each rule group:
 
