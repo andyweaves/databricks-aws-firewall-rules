@@ -2,6 +2,9 @@
 
 This repo contains some example firewall rules for [AWS Network Firewall](https://aws.amazon.com/network-firewall/), specifically designed to help organisations further secure their [Databricks](https://databricks.com/) environments against the threat of data exfiltration. 
 
+> [!WARNING]
+> You are ultimately responsible for the security of your environment, and for ensuring that the firewall rules that you implement meet your requirements. 
+
 To use these rules:
 
 1) Set up the [AWS CLI](https://docs.aws.amazon.com/cli/)
@@ -22,8 +25,5 @@ To use these rules:
   > ```aws network-firewall create-rule-group --rule-group-name Databricks-IPs --rule-group file://allow-list-ips.json --type STATEFUL --capacity 100```
 
   > ```aws network-firewall create-rule-group --rule-group-name Deny-Protocols --rule-group file://deny-list.json --type STATEFUL --capacity 100```
-
-> [!WARNING]
-> You are responsible for the security of your environment.
 
 Happy firewalling!
