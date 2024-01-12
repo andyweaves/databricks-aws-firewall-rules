@@ -18,12 +18,13 @@
                         "Source": "ANY",
                         "SourcePort": "ANY",
                         "Direction": "FORWARD",
-                        "Destination": "<>",
+                        "Destination": "<DATABRICKS MANAGED HIVE METASTORE IP ADDRESS>",
                         "DestinationPort": "3306"
                     }
                 }
             ],
-"StatefulRuleOptions": {
-    "RuleOrder": "STRICT_ORDER"
+		"StatefulRuleOptions": {
+			"RuleOrder": "STRICT_ORDER"
+		}
 	}
 }
