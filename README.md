@@ -23,7 +23,7 @@ To use these rules:
 
   > ```aws network-firewall create-rule-group --rule-group-name Deny-Protocols --rule-group file://deny-list.json --type STATEFUL --capacity 100```
 
-> !WARNING]
+> [!WARNING]
 > You are responsible for the security of your environment.
 
 Happy firewalling!
