@@ -17,12 +17,13 @@
                         ],
                         "GeneratedRulesType": "ALLOWLIST",
                         "Targets": [
-         "<RDS (IF USING BUILT-IN METASTORE)>.rds.amazonaws.com",
-         "<DATABRICKS INSTANCE NAME>.cloud.databricks.com", 
          ".pypi.org",
          ".pythonhosted.org",
          ".cran.r-project.org"
          ]
       }
-   }
+   },
+"StatefulRuleOptions": {
+    "RuleOrder": "STRICT_ORDER"
+	}
 }
