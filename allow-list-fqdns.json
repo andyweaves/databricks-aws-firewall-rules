@@ -1,29 +1,29 @@
 {
-    "RuleVariables": {
-                "IPSets": {
-                        "HOME_NET": {
-                                "Definition": [
-                                  "<SPOKE VPC CIDR RANGE>",
-				  "<HUB VPC CIDR RANGE>"
-                                ]
-                        }
-                }
+ "RuleVariables": {
+    "IPSets": {
+        "HOME_NET": {
+                "Definition": [
+                    "<SPOKE VPC CIDR RANGE>",
+                    "<HUB VPC CIDR RANGE>"
+                ]
+            }
+        }
+    },
+    "RulesSource": {
+        "RulesSourceList": {
+            "TargetTypes": [
+               "TLS_SNI",
+                "HTTP_HOST"
+            ],
+            "GeneratedRulesType": "ALLOWLIST",
+                "Targets": [
+                 ".pypi.org",
+                 ".pythonhosted.org",
+                 ".cran.r-project.org"
+                ]
+            }
         },
-        "RulesSource": {
-                "RulesSourceList": {
-                        "TargetTypes": [
-                           "TLS_SNI",
-                           "HTTP_HOST"
-                        ],
-                        "GeneratedRulesType": "ALLOWLIST",
-                        "Targets": [
-         ".pypi.org",
-         ".pythonhosted.org",
-         ".cran.r-project.org"
-         ]
-      }
-   },
-"StatefulRuleOptions": {
-    "RuleOrder": "STRICT_ORDER"
+        "StatefulRuleOptions": {
+            "RuleOrder": "STRICT_ORDER"
 	}
 }

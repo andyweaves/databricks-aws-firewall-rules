@@ -1,16 +1,16 @@
 {
-     "RuleVariables": {
-                "IPSets": {
-                        "HOME_NET": {
-                                "Definition": [
-                                    	"<SPOKE VPC CIDR RANGE>",
-			 		"<HUB VPC CIDR RANGE>"
-                                ]
-                        }
-                }
-        },
-        "RulesSource": {
-            "StatefulRules": [
+ "RuleVariables": {
+        "IPSets": {
+            "HOME_NET": {
+                "Definition": [
+                	"<SPOKE VPC CIDR RANGE>",
+                    "<HUB VPC CIDR RANGE>"
+                ]
+            }
+        }
+    },
+    "RulesSource": {
+        "StatefulRules": [
             {
                 "Action": "DROP",
                 "Header": {
@@ -20,7 +20,15 @@
                     "Direction": "ANY",
                     "Destination": "ANY",
                     "DestinationPort": "ANY"
-                }
+                },
+                "RuleOptions": [
+                    {
+                        "Keyword": "sid",
+                        "Settings": [
+                            "1"
+                        ]
+                    }
+                ]
             },
             {
                 "Action": "DROP",
@@ -31,7 +39,15 @@
                     "Direction": "ANY",
                     "Destination": "ANY",
                     "DestinationPort": "ANY"
-                }
+                },
+                "RuleOptions": [
+                    {
+                        "Keyword": "sid",
+                        "Settings": [
+                            "2"
+                        ]
+                    }
+                ]
             },
             {
                 "Action": "DROP",
@@ -42,7 +58,15 @@
                     "Direction": "ANY",
                     "Destination": "ANY",
                     "DestinationPort": "ANY"
-                }
+                },
+                "RuleOptions": [
+                    {
+                        "Keyword": "sid",
+                        "Settings": [
+                            "3"
+                        ]
+                    }
+                ]
             }
         ]
     },
