@@ -12,8 +12,8 @@ To use these rules:
     * ```"<HUB VPC CIDR RANGE>"``` - The CIDR range for the VPC in which your [AWS Network Firewall](https://aws.amazon.com/network-firewall/) sits
     * ```"<DATABRICKS MANAGED HIVE METASTORE IP ADDRESS>"``` - (Optional) The **current IP address** of the [Databricks](https://databricks.com/) Managed Hive Metastore for your region as per [RDS addresses for legacy Hive metastore](https://docs.databricks.com/en/resources/supported-regions.html#rds-addresses-for-legacy-hive-metastore). Alternatively customers can use [their own Hive Metastore (legacy)](https://docs.databricks.com/data/metastores/external-hive-metastore.html) or [AWS Glue (legacy)](https://docs.databricks.com/data/metastores/aws-glue-metastore.html).
   
-> [!WARNING]  
-> The IP Address.
+> [!CAUTION]
+> The IP Address for the legacy Hive Metastore is not static and is therefore subject to change. 
 
 4) Use the [create-rule-group](https://docs.aws.amazon.com/cli/latest/reference/network-firewall/create-rule-group.html) command to create each rule group:
 
@@ -22,5 +22,8 @@ To use these rules:
   > ```aws network-firewall create-rule-group --rule-group-name Databricks-IPs --rule-group file://allow-list-ips.json --type STATEFUL --capacity 100```
 
   > ```aws network-firewall create-rule-group --rule-group-name Deny-Protocols --rule-group file://deny-list.json --type STATEFUL --capacity 100```
+
+> !WARNING]
+> You are responsible for the security of your environment.
 
 Happy firewalling!
