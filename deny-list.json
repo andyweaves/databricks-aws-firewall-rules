@@ -15,50 +15,38 @@
                 "Action": "DROP",
                 "Header": {
                     "Protocol": "FTP",
-                    "Source": "Any",
-                    "SourcePort": "Any",
+                    "Source": "ANY",
+                    "SourcePort": "ANY",
                     "Direction": "ANY",
-                    "Destination": "Any",
-                    "DestinationPort": "Any"
-                },
-                "RuleOptions": [
-                    {
-                        "Keyword": "sid:1"
-                    }
-                ]
+                    "Destination": "ANY",
+                    "DestinationPort": "ANY"
+                }
             },
             {
                 "Action": "DROP",
                 "Header": {
                     "Protocol": "SSH",
-                    "Source": "Any",
-                    "SourcePort": "Any",
+                    "Source": "ANY",
+                    "SourcePort": "ANY",
                     "Direction": "ANY",
-                    "Destination": "Any",
-                    "DestinationPort": "Any"
-                },
-                "RuleOptions": [
-                    {
-                        "Keyword": "sid:2"
-                    }
-                ]
+                    "Destination": "ANY",
+                    "DestinationPort": "ANY"
+                }
             },
             {
                 "Action": "DROP",
                 "Header": {
                     "Protocol": "ICMP",
-                    "Source": "Any",
-                    "SourcePort": "Any",
+                    "Source": "ANY",
+                    "SourcePort": "ANY",
                     "Direction": "ANY",
-                    "Destination": "Any",
-                    "DestinationPort": "Any"
-                },
-                "RuleOptions": [
-                    {
-                        "Keyword": "sid:3"
-                    }
-                ]
+                    "Destination": "ANY",
+                    "DestinationPort": "ANY"
+                }
             }
         ]
-    }
+    },
+	"StatefulRuleOptions": {
+		"RuleOrder": "STRICT_ORDER"
+	}
 }
